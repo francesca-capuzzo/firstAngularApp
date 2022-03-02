@@ -1,0 +1,20 @@
+footer{
+    background-color: #313131;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+footer a{
+    color: tomato;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.github{
+    width: 30px;
+    height: 30px;
+}
