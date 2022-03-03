@@ -2,7 +2,7 @@
 //NB il ! dice che la proprietà è obbligatoria ma non inizializzata e quindi viene forzatamente inizializzata a NULL da Angular
 
 export class Task {
-
+  id: string;
   name: string;
   comment?: string;
   tag?: string[];                      //type: array di stringhe --> se volessi un array generico --> any[]
@@ -18,8 +18,15 @@ export class Task {
     this.name = name;
     this.priority = priority;
     this.creationDate = new Date();     //prende la data di adesso (momento della creazione)
+    this.id = name.split(" ")[0] + Task.generateRandomId();
+  }
+
+
+  static generateRandomId(): number{
+    return Math.floor(Math.random()*1000000);
   }
 }
+
 
 
 let task = new Task("compra il pane", 2)

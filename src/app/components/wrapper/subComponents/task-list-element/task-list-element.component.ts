@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';  //importa 2 cose: Component --> per andare a definire il tipo di elemento | Oninit
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';  //importa 2 cose: Component --> per andare a definire il tipo di elemento | Oninit
 import { Task } from 'src/app/model/task';
 
 
@@ -12,15 +12,21 @@ import { Task } from 'src/app/model/task';
 
 export class TaskListElementComponent implements OnInit { //E' una classe che implementa OnInit --> ngOnInit definisce il ciclo di vita dell'oggetto --> dove creo i task
   
-  @Input() task?: Task;            //@input è ciò che viene dato in input all'elemento task-list-element 
+  @Input() task?: Task;                                   //@input è ciò che viene dato in input all'elemento task-list-element 
+  @Output() done: EventEmitter<string>;                  //per tutti gli output devo generare degli eventi con EVENTEMITTER (classe js)
   
 
   constructor() {
     // this.task = new Task("Studia Angular", 10)
+    this.done = new EventEmitter<string>();
    }
 
   ngOnInit(): void {
-    this.task
   }
 
+  taskDone(){
+    if (this.task) {
+      this.done.emit(this.task.id);
+    }
+  }
 }

@@ -25,4 +25,14 @@ export class ToDoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  taskDeleted(id:string){   //id arriverà in input dalla funzione TaskDone()
+    let tempArray = [];
+    for (const task of this.taskList) {
+      if (task.id !== id) {
+        tempArray.push(task);
+      }
+    }
+    this.taskList = tempArray;
+  }
+
 }
