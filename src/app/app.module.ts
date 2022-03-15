@@ -12,6 +12,12 @@ import { StatsComponent } from './components/wrapper/subComponents/stats/stats.c
 import { TaskInputComponent } from './components/wrapper/subComponents/task-input/task-input.component';
 import { TaskListElementComponent } from './components/wrapper/subComponents/task-list-element/task-list-element.component';
 import { ToDoComponent } from './components/wrapper/subComponents/to-do/to-do.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button'; 
+import {MatExpansionModule} from '@angular/material/expansion'; 
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,7 +36,14 @@ import { ToDoComponent } from './components/wrapper/subComponents/to-do/to-do.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatExpansionModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
