@@ -3,3 +3,18 @@
 <!-- <app-welcome></app-welcome> -->
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+
+
+
+<!-- 
+<mat-drawer-container class="container" autosize>
+    <app-header (onMenuClicked)="drawer.toggle()"></app-header>      <!-NB ANCHE SE #DRAWER è DEFINITO DOPO, TUTTI I FRATELLI PRIMA E DOPO LO VEDONO. IL PAPA' INVECE NO!!!!!->
+    <mat-drawer #drawer class="sidenav" mode="side" position="end">  <!-POSITION="END" sposta la sidenav dall'altro lato -> guarda angular material API-->
+                                                                     <!--MODE=SIDE -> per comprimere tutta la pagina quando si apre / MODE=OVER -> per scurire il background e fare la sidenav sopra / MODE=PUSH -> come side ma sposta anche header e footer->
+        <p>ECCO LA SIDENAV</p>
+    </mat-drawer>
+    <router-outlet></router-outlet>
+    <div class="sidenav-content">
+    </div>
+    <app-footer></app-footer>
+</mat-drawer-container> -->

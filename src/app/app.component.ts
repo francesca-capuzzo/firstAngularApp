@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstAngularApp';
+
+  // logMenuClick():void{
+  //   console.log('cliccato');
+  // }
 }

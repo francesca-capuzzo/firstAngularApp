@@ -1,7 +1,8 @@
 <header>
     <mat-toolbar color="primary"> <!--'primary' è deep-purple mentre 'accent' è amber-->
-      <button mat-icon-button>
+      <button mat-icon-button (click)="menuClick()" *ngIf="!(router.url === '/welcome')">
         <mat-icon>menu</mat-icon>
+        <!--<mat-icon (click)="onMenuClicked.emit()">menu</mat-icon>       si può utilizzare la funzione menuClick() o direttamente l'event onMenuClicked().emit--> 
       </button>
         <span>TO-DO-LIST</span>
         <span class="spacer"></span>

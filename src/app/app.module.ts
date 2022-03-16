@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatExpansionModule} from '@angular/material/expansion'; 
 import { HttpClientModule } from '@angular/common/http';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatExpansionModule,
     HttpClientModule,
+    MatSidenavModule,
 
   ],
   providers: [],
