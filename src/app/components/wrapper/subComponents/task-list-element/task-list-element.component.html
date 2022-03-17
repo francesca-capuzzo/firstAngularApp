@@ -18,7 +18,8 @@
         </mat-panel-title>
         <mat-panel-description>
           Priority: {{task.priority}}
-          <mat-icon (click)="taskDone()">done</mat-icon>
+          <mat-icon *ngIf="!task.doneDate" (click)="taskDone()">done</mat-icon>
+          <mat-icon *ngIf="task.doneDate" (click)="taskDelete()">delete</mat-icon>
         </mat-panel-description>
       </mat-expansion-panel-header>
       <div class="data-container">

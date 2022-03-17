@@ -20,7 +20,12 @@ export class DoneComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.apiService.getDoneTask().subscribe(data => this.doneList = data);
     this.apiService.getDoneTask().subscribe(data => this.doneList = data);
+  }
+
+  deleteTask(taskID: string){
+    this.apiService.deleteTask(taskID).subscribe(data => console.log(data));
   }
 
 }
